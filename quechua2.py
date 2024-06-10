@@ -43,11 +43,6 @@ def conjugador(base,persona,numero,tiempo):
 
 conjugador('miku','segunda','plural','presentesimple')
 
-#Para ingresar más fácilmente las condiciones
-base = input('Ingrese base aquí:')
-persona= input('Ingrese persona (diferencia primera incl / excl):')
-numero = input('Ingrese número (singular / plural):')
-tiempo = input('Ingrese tiempo (sinespacios):')
 
 
 ##diccionario
@@ -61,10 +56,10 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 
 
-option = st.selectbox(
+base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
     
-st.write("El verbo en espanol es:",dict_que_esp[option])
+st.write("El verbo en espanol es:",dict_que_esp[base])
 
 
 #para persona
@@ -73,8 +68,13 @@ persona = st.selectbox(
     "Seleccione una persona:",
     ["primera inclusiva","primera exclusiva","segunda","tercera"])
     
-st.write("Seleccionaste:",persona)
+st.write("Seleccionaste:", persona)
 
+#para tiempo
+tiempo = st.selectbox(
+    "Seleccione un tiempo:",
+    ["presentesimple","presenteprogresivo", "presentehabitual", "pasadoexperimentadosimple", "pasadoexperimentadoprogresivo", "pasadoexperimentadohabitual", "pasadonoexperimentadosimple", "pasadonoexperimentadoprogresivo", "pasadonoexperimentadohabitual"])
+st.write("Seleccionaste:", tiempo)
 #para número
 
 numero = st.selectbox(
@@ -82,3 +82,5 @@ numero = st.selectbox(
     ["singular","plural"])
 
 st.write("Seleccionaste:", numero)
+
+st.write("El verbo conjugado es:", conjugador(base,persona,numero,tiempo))
