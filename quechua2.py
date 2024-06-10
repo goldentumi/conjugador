@@ -62,7 +62,7 @@ base = st.selectbox(
 if base.endswith("y"):
    base = base[:-1]
 
-st.write("El verbo en español es:", dict_que_esp[base])
+#st.write("El verbo en español es:", dict_que_esp[base])
 
 
 #para persona
