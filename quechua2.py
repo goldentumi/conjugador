@@ -61,7 +61,7 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 base = st.selectbox(
     
-    "Seleccione un verbo en quechua",quechua)
+    ":violet-background[Seleccione un verbo en quechua]",quechua)
 st.write("El verbo en español es:", dict_que_esp[base])
 if base.endswith("y"):
    base = base[:-1]
