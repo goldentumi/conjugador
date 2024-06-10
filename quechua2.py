@@ -74,7 +74,12 @@ if base.endswith("y"):
 persona = st.selectbox(
     "Seleccione una persona:",
     ["primera inclusiva","primera exclusiva","segunda","tercera"])
+ 
+
+with st.popover("¿Por qué hay dos opciones para primera persona?"):
+    st.markdown("En quechua, el plural de primera persona distingue entre inclusiva y exclusiva.\nInclusiva: todos nosotros \nExclusiva: nosotros (tú y yo)")
     
+
 st.write("Seleccionaste:", persona)
 
 #para tiempo
