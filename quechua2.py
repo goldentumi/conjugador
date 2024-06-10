@@ -4,6 +4,9 @@
 import streamlit as st
 import pandas as pd
 
+st.title('Conjugador:pink[quechua]')
+
+
 verbos = pd.read_excel ('verbos.xlsx')
 # -*- coding: utf-8 -*-
 
