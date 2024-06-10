@@ -54,9 +54,6 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 ##importamos streamlit
 
-for item in quechua:
-    if item.endswith("y"):
-       item[-1] == ""
     
 
 base = st.selectbox(
