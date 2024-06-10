@@ -54,13 +54,14 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 ##importamos streamlit
 
-
+for item in quechua:
+    if item.endswith("y"):
+       item = item[:-1]
+    
 
 base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
 
-if quechua.endswith('y'):
-    base == base[:-1]    
 
 st.write("El verbo en español es:",dict_que_esp[base])
 
