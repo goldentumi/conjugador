@@ -48,7 +48,7 @@ conjugador('miku','segunda','plural','presentesimple')
 ##diccionario
 
 quechua = list(verbos['quechua'])
-espanol = list(verbos['espanol'])
+espanol = list(verbos['español'])
 
 dict_que_esp = dict(zip(quechua,espanol))
 
