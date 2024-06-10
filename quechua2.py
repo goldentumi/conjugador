@@ -4,7 +4,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title(':rainbow[Conjugador quechua]')
+st.title(':rainbow[Conjugador de verbos en quechua]')
 
 
 verbos = pd.read_excel ('verbos.xlsx')
