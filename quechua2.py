@@ -78,8 +78,8 @@ persona = st.selectbox(
 
 with st.popover("¿Por qué hay dos opciones para primera persona?"):
     st.markdown('''En quechua, el plural de primera persona distingue entre inclusiva y exclusiva.  
-                Inclusiva: todos nosotros   
-                Exclusiva: nosotros (tú y yo)''')
+                :green[**Inclusiva:**] todos nosotros   
+                :green[**Exclusiva:**] nosotros (tú y yo)''')
     
 
 st.write("Seleccionaste:", persona)
