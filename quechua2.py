@@ -56,7 +56,7 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 for item in quechua:
     if item.endswith("y"):
-       item = item[:-1]
+       item[-1] == ""
     
 
 base = st.selectbox(
