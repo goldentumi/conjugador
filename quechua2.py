@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #leemos el excel
-
+import streamlit as st
 import pandas as pd
 
 verbos = pd.read_excel ('quechua.xlsx')
@@ -59,7 +59,7 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 ##importamos streamlit
 
-import streamlit as st
+
 
 option = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
