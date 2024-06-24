@@ -4,14 +4,18 @@
 import streamlit as st
 import pandas as pd
 
-page_bg = """
-<style>
-body {
-    background-color: #f0f2f6;
-}
-</style>
-"""
-st.markdown(page_bg, unsafe_allow_html=True)
+def color_de_fondo(color):
+    css_style = f"""
+    <style>
+    body {{
+        background-color: {color};
+    }}
+
+    </style>
+    """
+    st.markdown(css_style, unsafe_allow_html=True)
+    
+color_de_fondo("#ffe3e8")
 
 st.title(':rainbow[Conjugador de verbos en quechua]')
 
