@@ -3,7 +3,7 @@
 #leemos el excel
 import streamlit as st
 import pandas as pd
-
+st.image('head.jpeg')
 def color_de_fondo():
     st.markdown(
         f'''
