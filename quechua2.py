@@ -4,7 +4,7 @@
 import streamlit as st
 import pandas as pd
 
-st.image('head.jpg')
+
 def color_de_fondo():
     st.markdown(
         f'''
@@ -20,7 +20,7 @@ def color_de_fondo():
 color_de_fondo()
 
 st.title(':rainbow[Conjugador de verbos en quechua]')
-
+st.image('head.jpg')
 
 verbos = pd.read_excel ('verbos.xlsx', sheet_name='Hoja 1')
 # -*- coding: utf-8 -*-
