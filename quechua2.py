@@ -21,7 +21,7 @@ color_de_fondo()
 st.title(':rainbow[Conjugador de verbos en quechua]')
 
 
-verbos = pd.read_excel ('verbos.xlsx')
+verbos = pd.read_excel ('verbos.xlsx', sheet_name='Hoja 1')
 # -*- coding: utf-8 -*-
 
 
@@ -98,11 +98,20 @@ with st.popover("¿Por qué hay dos opciones para primera persona?"):
 
 st.write("Seleccionaste:", persona)
 
+#diccionario de tiempos
+time = pd.read_excel('verbos.xlsx', sheet_name='tiempo')
+col1 = time.columns
+time.set_index(col1[0], inplace=True)
+d_tiempo = time.to_dict()
+
 #para tiempo
 tiempo = st.selectbox(
     "Seleccione un tiempo:",
     ["presentesimple","presenteprogresivo", "presentehabitual", "pasadoexperimentadosimple", "pasadoexperimentadoprogresivo", "pasadoexperimentadohabitual", "pasadonoexperimentadosimple", "pasadonoexperimentadoprogresivo", "pasadonoexperimentadohabitual"])
 st.write("Seleccionaste:", tiempo)
+
+with st.popover ("Da click aquí para conocer más sobre los tiempos."):
+    st.markdown(d_tiempo[tiempo])
 #para número
 
 numero = st.selectbox(
