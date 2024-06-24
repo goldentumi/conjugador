@@ -4,6 +4,7 @@
 import streamlit as st
 import pandas as pd
 
+st.image('head.jpg')
 def color_de_fondo():
     st.markdown(
         f'''
