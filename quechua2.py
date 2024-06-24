@@ -15,7 +15,7 @@ def color_de_fondo(color):
     """
     st.markdown(css_style, unsafe_allow_html=True)
     
-color_de_fondo("#ffe3e8")
+color_de_fondo("#FFE3E8")
 
 st.title(':rainbow[Conjugador de verbos en quechua]')
 
